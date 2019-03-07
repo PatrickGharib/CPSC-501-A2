@@ -4,8 +4,8 @@ public class Inspector{
        Class classObject = object.getClass();
        Class superClassObject = classObject.getSuperclass();
        Class[] interfaceObjects = classObject.getInterfaces();
-       Method methodObjects[] = classObject.getDeclaredMethods();
 
+       Method methodObjects[] = classObject.getDeclaredMethods();
        for (Method method : methodObjects){
            Class methodExceptionTypes[] = method.getExceptionTypes();
            Class methodParameterTypes[] = method.getParameterTypes();
@@ -13,6 +13,14 @@ public class Inspector{
            int modifiers = method.getModifiers();
            String toStringModifiers = Modifier.toString(modifiers);
        }
+
+       Constructor constructorObjects[] = classObject.getConstructors();
+       for (Constructor constructor : constructorObjects){
+           Class constructorParameterTypes[] = constructor.getParameterTypes();
+           int modifiers = constructor.getModifiers();
+           String toStringModifiers = Modifier.toString(modifiers);
+       }
+
 
 
 
