@@ -1,15 +1,29 @@
 import java.lang.reflect.*;
 public class Inspector{
-   // public void inspect(Object object, Boolean recursive){
+   public void inspect(Object object, Boolean recursive){
+       Class classObject = object.getClass();
+       Class superClassObject = classObject.getSuperclass();
+       Class[] interfaceObjects = classObject.getInterfaces();
+       Method methodObjects[] = classObject.getDeclaredMethods();
 
-   // }
-    public static Class getDeclaringClass(Object objectToInspect){
-        Class classObject = objectToInspect.getClass();
-        return classObject;
+       for (Method method : methodObjects){
+           Class methodExceptionTypes[] = method.getExceptionTypes();
+           Class methodParameterTypes[] = method.getParameterTypes();
+           Class methodReturnType = method.getReturnType();
+           int modifiers = method.getModifiers();
+           String toStringModifiers = Modifier.toString(modifiers);
+       }
+
+
+
+   }
+    //public static Class getDeclaringClass(Object objectToInspect){
+      //  Class classObject = objectToInspect.getClass();
+        //return classObject;
         //System.out.println("Declaring Class: " + classObject);
 
-    };
-    // public static void getImmediateSuperClass(){};
+   // };
+    //public static void getImmediateSuperClass(){};
     // public static void getImplementedInterfaces(){};
     
     // public static void getDeclaredMethods(){};
