@@ -21,6 +21,14 @@ public class Inspector{
            String toStringModifiers = Modifier.toString(modifiers);
        }
 
+       Field fieldObjects[] = classObject.getDeclaredFields();
+       for (Field field : fieldObjects){
+           Class fieldType = field.getType();
+           int modifiers = field.getModifiers();
+
+       }
+
+
 
 
 
