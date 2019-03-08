@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Inspector{
     private HashSet<Integer> uniqueObjectInspectionHash;
-    private Inspector(){
+    public Inspector(){
         this.uniqueObjectInspectionHash = new HashSet<Integer>();
     }
     public void inspect(Object object, boolean recurseFlag) {
@@ -30,21 +30,54 @@ public class Inspector{
            constructorInspector(constructorObjs);
 
            Field[] fieldObjs = classObj.getDeclaredFields();
+           fieldInspector(fieldObjs, object, recurseFlag);
 
        }catch(Exception exception){
            exception.printStackTrace();
        }
    }
-   public void fieldInspector(Field[] fieldObjs, Objects object, boolean recurseFlag){
+   public void fieldInspector(Field[] fieldObjs, Object object, boolean recurseFlag){
+       System.out.println("\n-------------" +
+               "Inspecting Fields-------------\n");
        for (Field field : fieldObjs) {
-           try{
+           try {
                Class fieldType = field.getType();
-               if (fieldType.isArray()){
-                   System.out.println("Field: " + field.getName() + "is an array");
+               if (fieldType.isArray()) {
+                   Object fieldValue = field.get(object);
+                   int lengthOfArray = Array.getLength(fieldValue);
+                   Object[] arrayContents;
 
+                   if (object instanceof Object[]) {
+                       arrayContents = (Object[]) object;
+                   } else {
+                       arrayContents = new Object[Array.getLength(object)];
+                       for (int i = 0; i < Array.getLength(object); i++) {
+                           arrayContents[i] = Array.get(object, i);
+                       }
 
                    }
-               String modifiers = Modifier.toString(field.getModifiers());
+                   Class arrayComponentType = fieldType.getComponentType();
+                   System.out.println("Field: " + field.getName() + "is an array");
+                   if (!arrayComponentType.isPrimitive()) {
+                       System.out.print("Component Type: "+arrayComponentType.getTypeName());
+                       if (arrayContents.length > 0) {
+                           for (Object arrayObject : arrayContents) {
+                               if (arrayObject != null) {
+                                   if (duplicateInspectionCheck(arrayObject)) {
+                                       System.out.println("No need to check duplicate objects.");
+                                   }else{inspect(arrayObject, recurseFlag);}
+                               }else{System.out.println(" null object found.");}
+                           }
+                       }else{System.out.println(" Empty Array.");}
+                   }else{System.out.println(" Is Primitive");}
+               }else if(!fieldType.isPrimitive()){
+                   System.out.println("Field: " + field + " is Primitive");
+                   //String modifiers = Modifier.toString(field.getModifiers());
+                   //System.out.println("Modifiers: " + modifiers);
+               }
+
+
+
            }catch (Exception exception){
                exception.printStackTrace();
            }
@@ -52,7 +85,13 @@ public class Inspector{
 
        }
    }
-   private HashSet<Integer> getUniqueObjectInspectionHash(){return this.uniqueObjectInspectionHash;}
+    public boolean duplicateInspectionCheck(Object object){
+        HashSet<Integer> uniqueObjectInspectionHash = this.getUniqueObjectInspectionHash();
+        if (uniqueObjectInspectionHash.contains(object.hashCode())){return true;}
+        else{return false;}
+    }
+
+    private HashSet<Integer> getUniqueObjectInspectionHash(){return this.uniqueObjectInspectionHash;}
 
        private void methodInspector(Method[] methodObjs){
         System.out.println("\n-------------" +
@@ -84,7 +123,7 @@ public class Inspector{
            if (classObjects.length > 0) {
                for (int i = 0; i < classObjects.length; i++) {
                    System.out.print(classObjects[i].getName());
-                   if (i != classObjects.length - 1) {
+                   if (i != (classObjects.length - 1)) {
                        System.out.print(",");
                    }
                }
