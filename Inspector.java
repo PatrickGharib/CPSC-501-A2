@@ -13,27 +13,106 @@ public class Inspector{
 
        try {
            Class classObj = object.getClass();
-           System.out.println("Declaring class: " + object);
-
            Class superClassObj = classObj.getSuperclass();
-           System.out.println("Immediate SuperClass: " + superClassObj.getName());
-
            Class[] interfaceObjs = classObj.getInterfaces();
-           System.out.print("Interfaces: "); printClassObjects(interfaceObjs); System.out.println();
-
-
-           Method[] methodObj = classObj.getDeclaredMethods();
-           methodInspector(methodObj);
-
-
            Constructor[] constructorObjs = classObj.getConstructors();
+           Field[] fieldObjs = classObj.getDeclaredFields();
+
+
+           classInspector(classObj, object, fieldObjs);
            constructorInspector(constructorObjs);
 
-           Field[] fieldObjs = classObj.getDeclaredFields();
-           fieldInspector(fieldObjs, object, recurseFlag);
+           if(recurseFlag){
+               System.out.println("-------------RECURSE ON FIELD: START-------------");
+               fieldInspector(fieldObjs, object, recurseFlag);
+               System.out.println("-------------RECURSE ON FIELD: END-------------");
+           }
 
        }catch(Exception exception){
            exception.printStackTrace();
+       }
+   }
+   public void classInspector(Class classObj, Object object, Field[] declaredFields){
+       Class superClassObj = classObj.getSuperclass();
+       Class[] interfaceObjs = classObj.getInterfaces();
+       Method[] methodObj = classObj.getDeclaredMethods();
+       Constructor[] constructorObjs = classObj.getConstructors();
+
+       System.out.println("Declaring class: " + object);
+       System.out.println("Immediate SuperClass: " + superClassObj.getName());
+       System.out.print("Interfaces: "); printClassObjects(interfaceObjs); System.out.println();
+
+       methodInspector(methodObj);
+       constructorInspector(constructorObjs);
+       fieldValuesInspector(declaredFields,object);
+   }
+   public void fieldValuesInspector(Field[] declaredFields, Object object){
+        for(Field field:declaredFields){
+            try{
+                field.setAccessible(true);
+                String typeString = null;
+                String valueOfFieldString = null;
+                Class fieldType = field.getType();
+                String modifiers = Modifier.toString(field.getModifiers());
+                Object valueOfField = field.get(object);
+                System.out.println("-----------------\nField: " + field.getName());
+                System.out.println("Modifier: " + modifiers);
+                if(fieldType.isArray()){
+                    Class typeOfArray = fieldType.getComponentType();
+                    typeString = typeOfArray.getName() + " [" + Array.getLength(valueOfField)+"]";
+
+                }else{
+                    typeString = fieldType.toString();
+                    if(fieldType.isPrimitive()){
+                        valueOfFieldString = valueOfField.toString();
+                        }
+                    else if(valueOfField!= null){valueOfFieldString = valueOfField.getClass().getName()+" "+valueOfField.hashCode();}
+                }
+                System.out.println("Type: " + typeString);
+
+                if(fieldType.isArray()){
+                    Object[] arrayContents;
+
+                    if (valueOfField instanceof Object[]) {
+                        arrayContents = (Object[]) valueOfField;
+                    } else {
+                        arrayContents = new Object[Array.getLength(valueOfField)];
+                        for (int i = 0; i < Array.getLength(valueOfField); i++) {
+                            arrayContents[i] = Array.get(valueOfField, i);
+                        }
+
+                        System.out.println("Array Contents: ");
+                        printArrayContents(arrayContents);
+                    }
+                }else{System.out.println("  Value: " + valueOfFieldString);}
+            }catch (Exception exception){
+                exception.printStackTrace();
+            }
+        }
+   }
+   public void printArrayContents(Object[] arrayContents){
+       for(int i =0; i < arrayContents.length; i++){
+           Object element = arrayContents[i];
+
+           String elementOutput = "";
+           if(element != null)
+                   //check if wrapper class instance
+                   if(element instanceof Character ||
+                           element instanceof Integer ||
+                           element instanceof Float ||
+                           element instanceof Long ||
+                           element instanceof Short ||
+                           element instanceof Double ||
+                           element instanceof Byte ||
+                           element instanceof Boolean)
+                       elementOutput += String.valueOf(element);
+                   else {
+                       Class eClass = element.getClass();
+                       elementOutput = eClass.getName() + " " + element.hashCode();
+                   }
+
+           System.out.println("Element " + i + ": " + elementOutput);
+
        }
    }
    public void fieldInspector(Field[] fieldObjs, Object object, boolean recurseFlag){
@@ -44,22 +123,21 @@ public class Inspector{
                Class fieldType = field.getType();
                if (fieldType.isArray()) {
                    Object fieldValue = field.get(object);
-                   int lengthOfArray = Array.getLength(fieldValue);
                    Object[] arrayContents;
 
-                   if (object instanceof Object[]) {
-                       arrayContents = (Object[]) object;
+                   if (fieldValue instanceof Object[]) {
+                       arrayContents = (Object[]) fieldValue;
                    } else {
-                       arrayContents = new Object[Array.getLength(object)];
-                       for (int i = 0; i < Array.getLength(object); i++) {
-                           arrayContents[i] = Array.get(object, i);
+                       arrayContents = new Object[Array.getLength(fieldValue)];
+                       for (int i = 0; i < Array.getLength(fieldValue); i++) {
+                           arrayContents[i] = Array.get(fieldValue, i);
                        }
 
                    }
                    Class arrayComponentType = fieldType.getComponentType();
                    System.out.println("Field: " + field.getName() + "is an array");
                    if (!arrayComponentType.isPrimitive()) {
-                       System.out.print("Component Type: "+arrayComponentType.getTypeName());
+                       System.out.println("-------------\nComponent Type: "+arrayComponentType.getTypeName());
                        if (arrayContents.length > 0) {
                            for (Object arrayObject : arrayContents) {
                                if (arrayObject != null) {
