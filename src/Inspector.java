@@ -1,3 +1,5 @@
+//author: Patrick Abou Gharib
+//ID: 10137116
 import java.lang.reflect.*;
 import java.util.*;
 
@@ -114,12 +116,13 @@ public class Inspector{
         }
    }
    public void printArrayContents(Object[] arrayContents){
-       for(int i =0; i < arrayContents.length; i++){
+       for(int i = 0; i < arrayContents.length; i++){
            Object element = arrayContents[i];
 
-           String elementOutput = "";
-           if(element != null)
-                   //check if wrapper class instance
+           String elementOutput = null;
+           if(element != null){
+             String elementValue = "";
+             if (element != null){
                    if(element instanceof Character ||
                            element instanceof Integer ||
                            element instanceof Float ||
@@ -128,13 +131,17 @@ public class Inspector{
                            element instanceof Double ||
                            element instanceof Byte ||
                            element instanceof Boolean)
-                       elementOutput += String.valueOf(element);
-                   else {
+                       elementValue += String.valueOf(element);
+                   }else {
                        Class eClass = element.getClass();
-                       elementOutput = eClass.getName() + " " + element.hashCode();
-                   }
+                       elementValue = eClass.getName() + " " + element.hashCode();
 
-           System.out.println("Element " + i + ": " + elementOutput);
+                   }
+                  elementOutput=elementValue;
+                 }
+
+              System.out.println("Element " + i + ": " + elementOutput);
+
 
        }
    }
@@ -185,6 +192,8 @@ public class Inspector{
 
 
        }
+       System.out.println("\n-------------" +
+               "Inspecting Fields END-------------\n");
    }
     public boolean duplicateInspectionCheck(Object object){
         HashSet<Integer> uniqueObjectInspectionHash = this.getUniqueObjectInspectionHash();
@@ -209,7 +218,7 @@ public class Inspector{
                System.out.println("Return Type: " + methodReturnType.getName());
                System.out.print("Parameter Types(s): ");
                printClassObjects(allMethodParameterTypes);
-               System.out.println();
+
 
 
                if (allMethodExceptionTypes.length > 0) {
@@ -219,6 +228,8 @@ public class Inspector{
                }else{System.out.println();}
                System.out.println();
            }
+           System.out.println("\n-------------" +
+                   "Inspecting Methods END-------------\n");
        }
        private void printClassObjects(Class[] classObjects){
            if (classObjects.length > 0) {
@@ -242,7 +253,8 @@ public class Inspector{
                System.out.println("modifiers: " + modifiers);
                System.out.print("Parameter Type(s): ");
                printClassObjects(allConstructorParameterTypes);
-               System.out.println("\n");
+               System.out.println("\n-------------" +
+                       "Inspecting Constructors END-------------\n");
            }
        }
     private void interfaceInspector(Class interfaceClassToInspect, Object object){
@@ -314,6 +326,3 @@ public class Inspector{
 
 
 }
-
-
-

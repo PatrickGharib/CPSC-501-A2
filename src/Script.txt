@@ -1,3 +1,8 @@
+Script started on 2019-03-08 22:38:37-07:00
+bash-4.4$ exitjavac *.java[C[C[C[C[C[C[C[C[C[C[8Pexitjava Asst2TestDriver Inspector[C[C[C[C[C[C[C[C[C[Cexit[Kjavac *.java
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+bash-4.4$ javac *.java[C[C[C[C[C[C[C[C[C[C[8Pexitjavac *.java[C[C[C[C[C[C[C[C[C[C[8Pexitjava Asst2TestDriver Inspector
 Loading object inspector: Inspector
 ======================================================
 Running Test: ClassA
@@ -8,32 +13,10 @@ Interfaces: java.io.Serializable,java.lang.Runnable
 -------------Inspecting Methods-------------
 
 -----------------
-Method: run
-Modifier: public
-Return Type: void
-Parameter Types(s): 
-
-
------------------
-Method: toString
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: setVal
-Modifier: public
-Return Type: void
-Parameter Types(s): int
-Exceptions: java.lang.Exception
-
------------------
 Method: getVal
 Modifier: public
 Return Type: int
 Parameter Types(s): 
-
 
 -----------------
 Method: printSomething
@@ -41,6 +24,26 @@ Modifier: private
 Return Type: void
 Parameter Types(s): 
 
+-----------------
+Method: run
+Modifier: public
+Return Type: void
+Parameter Types(s): 
+
+-----------------
+Method: toString
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): 
+
+-----------------
+Method: setVal
+Modifier: public
+Return Type: void
+Parameter Types(s): intExceptions: java.lang.Exception
+
+
+-------------Inspecting Methods END-------------
 
 
 -------------Inspecting Constructors-------------
@@ -49,11 +52,13 @@ Parameter Types(s):
 constructor: ClassA
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: ClassA
 modifiers: public
 Parameter Type(s): int
+-------------Inspecting Constructors END-------------
 
 -----------------
 Field: val
@@ -82,6 +87,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -90,29 +96,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -120,13 +122,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -134,20 +134,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -155,13 +152,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -169,6 +164,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -184,6 +181,9 @@ Parameter Types(s):
 
 
 -------------Inspecting Methods-------------
+
+
+-------------Inspecting Methods END-------------
 
 
  no superClass to the Interface java.io.Serializable
@@ -205,6 +205,8 @@ Return Type: void
 Parameter Types(s): 
 
 
+-------------Inspecting Methods END-------------
+
 
  no superClass to the Interface java.lang.Runnable
 
@@ -214,6 +216,9 @@ Parameter Types(s):
 -------------RECURSE ON FIELD: START-------------
 
 -------------Inspecting Fields-------------
+
+
+-------------Inspecting Fields END-------------
 
 -------------RECURSE ON FIELD: END-------------
 ======================================================
@@ -226,32 +231,10 @@ Interfaces: java.io.Serializable,java.lang.Runnable
 -------------Inspecting Methods-------------
 
 -----------------
-Method: run
-Modifier: public
-Return Type: void
-Parameter Types(s): 
-
-
------------------
-Method: toString
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: setVal
-Modifier: public
-Return Type: void
-Parameter Types(s): int
-Exceptions: java.lang.Exception
-
------------------
 Method: getVal
 Modifier: public
 Return Type: int
 Parameter Types(s): 
-
 
 -----------------
 Method: printSomething
@@ -259,6 +242,26 @@ Modifier: private
 Return Type: void
 Parameter Types(s): 
 
+-----------------
+Method: run
+Modifier: public
+Return Type: void
+Parameter Types(s): 
+
+-----------------
+Method: toString
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): 
+
+-----------------
+Method: setVal
+Modifier: public
+Return Type: void
+Parameter Types(s): intExceptions: java.lang.Exception
+
+
+-------------Inspecting Methods END-------------
 
 
 -------------Inspecting Constructors-------------
@@ -267,11 +270,13 @@ Parameter Types(s):
 constructor: ClassA
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: ClassA
 modifiers: public
 Parameter Type(s): int
+-------------Inspecting Constructors END-------------
 
 -----------------
 Field: val
@@ -300,6 +305,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -308,29 +314,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -338,13 +340,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -352,20 +352,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -373,13 +370,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -387,6 +382,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -402,6 +399,9 @@ Parameter Types(s):
 
 
 -------------Inspecting Methods-------------
+
+
+-------------Inspecting Methods END-------------
 
 
  no superClass to the Interface java.io.Serializable
@@ -423,6 +423,8 @@ Return Type: void
 Parameter Types(s): 
 
 
+-------------Inspecting Methods END-------------
+
 
  no superClass to the Interface java.lang.Runnable
 
@@ -432,6 +434,9 @@ Parameter Types(s):
 -------------RECURSE ON FIELD: START-------------
 
 -------------Inspecting Fields-------------
+
+
+-------------Inspecting Fields END-------------
 
 -------------RECURSE ON FIELD: END-------------
 ======================================================
@@ -444,11 +449,16 @@ Interfaces: java.lang.Runnable
 -------------Inspecting Methods-------------
 
 -----------------
+Method: func3
+Modifier: public
+Return Type: void
+Parameter Types(s): int
+
+-----------------
 Method: run
 Modifier: public
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: toString
@@ -457,12 +467,7 @@ Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: func3
-Modifier: public
-Return Type: void
-Parameter Types(s): int
-
+-------------Inspecting Methods END-------------
 
 
 -------------Inspecting Constructors-------------
@@ -471,17 +476,18 @@ Parameter Types(s): int
 constructor: ClassB
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 Field: val
 Modifier: private
 Type: class ClassA
-  Value: ClassA 1740000325
+  Value: ClassA 1808253012
 -----------------
 Field: val2
 Modifier: private
 Type: class ClassA
-  Value: ClassA 2036958521
+  Value: ClassA 589431969
 -----------------
 Field: val3
 Modifier: private
@@ -500,21 +506,46 @@ SuperInterfaces: InterfaceA
 constructor: ClassC
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: ClassC
 modifiers: public
 Parameter Type(s): int,int
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
+
+-----------------
+Method: func3
+Modifier: public abstract
+Return Type: void
+Parameter Types(s): int
+
+-----------------
+Method: func0
+Modifier: public
+Return Type: void
+Parameter Types(s): int,booleanExceptions: java.lang.Exception
+
+-----------------
+Method: func1
+Modifier: public
+Return Type: void
+Parameter Types(s): int,double,boolean,java.lang.StringExceptions: java.lang.Exception
+
+-----------------
+Method: func2
+Modifier: public
+Return Type: int
+Parameter Types(s): java.lang.StringExceptions: java.lang.Exception,java.lang.ArithmeticException,java.lang.IllegalMonitorStateException
 
 -----------------
 Method: run
 Modifier: public
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: toString
@@ -523,49 +554,23 @@ Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: func0
-Modifier: public
-Return Type: void
-Parameter Types(s): int,boolean
-Exceptions: java.lang.Exception
-
------------------
-Method: func1
-Modifier: public
-Return Type: void
-Parameter Types(s): int,double,boolean,java.lang.String
-Exceptions: java.lang.Exception
-
------------------
-Method: func2
-Modifier: public
-Return Type: int
-Parameter Types(s): java.lang.String
-Exceptions: java.lang.Exception,java.lang.ArithmeticException,java.lang.IllegalMonitorStateException
-
------------------
-Method: func3
-Modifier: public abstract
-Return Type: void
-Parameter Types(s): int
-
+-------------Inspecting Methods END-------------
 
 -----------------
 Field: val2
 Modifier: private
 Type: class ClassA
-  Value: ClassA 1945604815
+  Value: ClassA 2101973421
 -----------------
 Field: val3
 Modifier: private
 Type: class ClassA
-  Value: ClassA 785992331
+  Value: ClassA 685325104
 -----------------
 Field: val4
 Modifier: private
 Type: class ClassA
-  Value: ClassA 940060004
+  Value: ClassA 460141958
 
 SuperClass of ClassC is ClassD
 
@@ -581,14 +586,22 @@ SuperInterfaces:
 constructor: ClassD
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: ClassD
 modifiers: public
 Parameter Type(s): int
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
+
+-----------------
+Method: getVal3
+Modifier: public
+Return Type: int
+Parameter Types(s): 
 
 -----------------
 Method: toString
@@ -597,18 +610,13 @@ Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: getVal3
-Modifier: public
-Return Type: int
-Parameter Types(s): 
-
+-------------Inspecting Methods END-------------
 
 -----------------
 Field: val
 Modifier: private
 Type: class ClassA
-  Value: ClassA 1810132623
+  Value: ClassA 1956725890
 -----------------
 Field: val2
 Modifier: private static
@@ -637,6 +645,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -645,29 +654,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -675,13 +680,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -689,20 +692,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -710,13 +710,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -724,6 +722,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -750,24 +750,25 @@ SuperClass: java.lang.Object
 -------------Inspecting Methods-------------
 
 -----------------
+Method: getVal3
+Modifier: public
+Return Type: int
+Parameter Types(s): 
+
+-----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: getVal3
-Modifier: public
-Return Type: int
-Parameter Types(s): 
-
+-------------Inspecting Methods END-------------
 
 -----------------
 Field: val
 Modifier: private
 Type: class ClassA
-  Value: ClassA 1810132623
+  Value: ClassA 1956725890
 -----------------
 Field: val2
 Modifier: private static
@@ -796,6 +797,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -804,29 +806,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -834,13 +832,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -848,20 +844,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -869,13 +862,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -883,6 +874,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -914,6 +907,8 @@ Return Type: void
 Parameter Types(s): 
 
 
+-------------Inspecting Methods END-------------
+
 
  no superClass to the Interface java.lang.Runnable
 
@@ -927,6 +922,9 @@ Parameter Types(s):
 Field: private ClassA ClassB.val is Primitive
 Field: private ClassA ClassB.val2 is Primitive
 Field: private ClassA ClassB.val3 is Primitive
+
+-------------Inspecting Fields END-------------
+
 -------------RECURSE ON FIELD: END-------------
 ======================================================
 ======================================================
@@ -938,18 +936,19 @@ Interfaces:
 -------------Inspecting Methods-------------
 
 -----------------
+Method: getVal3
+Modifier: public
+Return Type: int
+Parameter Types(s): 
+
+-----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: getVal3
-Modifier: public
-Return Type: int
-Parameter Types(s): 
-
+-------------Inspecting Methods END-------------
 
 
 -------------Inspecting Constructors-------------
@@ -958,17 +957,19 @@ Parameter Types(s):
 constructor: ClassD
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: ClassD
 modifiers: public
 Parameter Type(s): int
+-------------Inspecting Constructors END-------------
 
 -----------------
 Field: val
 Modifier: private
 Type: class ClassA
-  Value: ClassA 120960120
+  Value: ClassA 21685669
 -----------------
 Field: val2
 Modifier: private static
@@ -995,6 +996,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -1003,29 +1005,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -1033,13 +1031,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -1047,20 +1043,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -1068,13 +1061,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -1082,6 +1073,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -1110,6 +1103,9 @@ Component Type: ClassA
  null object found.
  null object found.
  null object found.
+
+-------------Inspecting Fields END-------------
+
 -------------RECURSE ON FIELD: END-------------
 ======================================================
 ======================================================
@@ -1121,18 +1117,19 @@ Interfaces:
 -------------Inspecting Methods-------------
 
 -----------------
+Method: getVal3
+Modifier: public
+Return Type: int
+Parameter Types(s): 
+
+-----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: getVal3
-Modifier: public
-Return Type: int
-Parameter Types(s): 
-
+-------------Inspecting Methods END-------------
 
 
 -------------Inspecting Constructors-------------
@@ -1141,17 +1138,19 @@ Parameter Types(s):
 constructor: ClassD
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: ClassD
 modifiers: public
 Parameter Type(s): int
+-------------Inspecting Constructors END-------------
 
 -----------------
 Field: val
 Modifier: private
 Type: class ClassA
-  Value: ClassA 546718765
+  Value: ClassA 1836019240
 -----------------
 Field: val2
 Modifier: private static
@@ -1178,6 +1177,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -1186,29 +1186,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -1216,13 +1212,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -1230,20 +1224,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -1251,13 +1242,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -1265,6 +1254,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -1293,20 +1284,194 @@ Component Type: ClassA
  null object found.
  null object found.
  null object found.
+
+-------------Inspecting Fields END-------------
+
 -------------RECURSE ON FIELD: END-------------
 ======================================================
 ======================================================
-Running Test: [LClassB;@9f70c54
-Declaring class: [LClassB;@9f70c54
+Running Test: [LClassB;@135fbaa4
+Declaring class: [LClassB;@135fbaa4
 Immediate SuperClass: java.lang.Object
 Interfaces: java.lang.Cloneable,java.io.Serializable
 
 -------------Inspecting Methods-------------
 
 
+-------------Inspecting Methods END-------------
+
+
 -------------Inspecting Constructors-------------
 
 Component Type: ClassB
+Element 0: null
+Element 1: null
+Element 2: null
+Element 3: null
+Element 4: null
+Element 5: null
+Element 6: null
+Element 7: null
+Element 8: null
+Element 9: null
+Element 10: null
+Element 11: null
+
+
+-----------------SUPERCLASS java.lang.Object INSPECTION START-----------------
+
+SuperInterfaces: 
+
+-------------Inspecting Constructors-------------
+
+-----------------
+constructor: java.lang.Object
+modifiers: public
+Parameter Type(s): 
+-------------Inspecting Constructors END-------------
+
+
+-------------Inspecting Methods-------------
+
+-----------------
+Method: finalize
+Modifier: protected
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final native
+Return Type: void
+Parameter Types(s): longExceptions: java.lang.InterruptedException
+
+-----------------
+Method: equals
+Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.Object
+
+-----------------
+Method: toString
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): 
+
+-----------------
+Method: hashCode
+Modifier: public native
+Return Type: int
+Parameter Types(s): 
+
+-----------------
+Method: getClass
+Modifier: public final native
+Return Type: java.lang.Class
+Parameter Types(s): 
+
+-----------------
+Method: clone
+Modifier: protected native
+Return Type: java.lang.Object
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
+
+-----------------
+Method: notify
+Modifier: public final native
+Return Type: void
+Parameter Types(s): 
+
+-----------------
+Method: notifyAll
+Modifier: public final native
+Return Type: void
+Parameter Types(s): 
+
+-----------------
+Method: registerNatives
+Modifier: private static native
+Return Type: void
+Parameter Types(s): 
+
+
+-------------Inspecting Methods END-------------
+
+
+ no other SuperClass of java.lang.Object
+
+ no SuperInterface of java.lang.Object
+
+
+-----------------SUPERCLASS java.lang.Object INSPECTION END-----------------
+
+
+
+-----------------INTERFACE java.lang.Cloneable INSPECTION START-----------------
+
+
+-------------Inspecting Methods-------------
+
+
+-------------Inspecting Methods END-------------
+
+
+ no superClass to the Interface java.lang.Cloneable
+
+
+-----------------INTERFACE java.lang.Cloneable INSPECTION END-----------------
+
+
+
+-----------------INTERFACE java.io.Serializable INSPECTION START-----------------
+
+
+-------------Inspecting Methods-------------
+
+
+-------------Inspecting Methods END-------------
+
+
+ no superClass to the Interface java.io.Serializable
+
+
+-----------------INTERFACE java.io.Serializable INSPECTION END-----------------
+
+-------------RECURSE ON FIELD: START-------------
+
+-------------Inspecting Fields-------------
+
+
+-------------Inspecting Fields END-------------
+
+-------------RECURSE ON FIELD: END-------------
+======================================================
+======================================================
+Running Test: [[LClassB;@2503dbd3
+Declaring class: [[LClassB;@2503dbd3
+Immediate SuperClass: java.lang.Object
+Interfaces: java.lang.Cloneable,java.io.Serializable
+
+-------------Inspecting Methods-------------
+
+
+-------------Inspecting Methods END-------------
+
+
+-------------Inspecting Constructors-------------
+
+Component Type: [LClassB;
 Element 0: 
 Element 1: 
 Element 2: 
@@ -1331,6 +1496,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -1339,29 +1505,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -1369,13 +1531,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -1383,20 +1543,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -1404,13 +1561,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -1418,6 +1573,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -1435,168 +1592,7 @@ Parameter Types(s):
 -------------Inspecting Methods-------------
 
 
- no superClass to the Interface java.lang.Cloneable
-
-
------------------INTERFACE java.lang.Cloneable INSPECTION END-----------------
-
-
-
------------------INTERFACE java.io.Serializable INSPECTION START-----------------
-
-
--------------Inspecting Methods-------------
-
-
- no superClass to the Interface java.io.Serializable
-
-
------------------INTERFACE java.io.Serializable INSPECTION END-----------------
-
--------------RECURSE ON FIELD: START-------------
-
--------------Inspecting Fields-------------
-
--------------RECURSE ON FIELD: END-------------
-======================================================
-======================================================
-Running Test: [[LClassB;@7946e1f4
-Declaring class: [[LClassB;@7946e1f4
-Immediate SuperClass: java.lang.Object
-Interfaces: java.lang.Cloneable,java.io.Serializable
-
--------------Inspecting Methods-------------
-
-
--------------Inspecting Constructors-------------
-
-Component Type: [LClassB;
-Element 0: [LClassB; 1556595366
-Element 1: [LClassB; 194494468
-Element 2: [LClassB; 1167116739
-Element 3: [LClassB; 853993923
-Element 4: [LClassB; 1347870667
-Element 5: [LClassB; 1702146597
-Element 6: [LClassB; 644460953
-Element 7: [LClassB; 591723622
-Element 8: [LClassB; 1166726978
-Element 9: [LClassB; 95395916
-Element 10: [LClassB; 1856056345
-Element 11: [LClassB; 1778535015
-
-
------------------SUPERCLASS java.lang.Object INSPECTION START-----------------
-
-SuperInterfaces: 
-
--------------Inspecting Constructors-------------
-
------------------
-constructor: java.lang.Object
-modifiers: public
-Parameter Type(s): 
-
-
--------------Inspecting Methods-------------
-
------------------
-Method: finalize
-Modifier: protected
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
-
------------------
-Method: wait
-Modifier: public final native
-Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: equals
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.Object
-
-
------------------
-Method: toString
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: hashCode
-Modifier: public native
-Return Type: int
-Parameter Types(s): 
-
-
------------------
-Method: getClass
-Modifier: public final native
-Return Type: java.lang.Class
-Parameter Types(s): 
-
-
------------------
-Method: clone
-Modifier: protected native
-Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
-
------------------
-Method: notify
-Modifier: public final native
-Return Type: void
-Parameter Types(s): 
-
-
------------------
-Method: notifyAll
-Modifier: public final native
-Return Type: void
-Parameter Types(s): 
-
-
------------------
-Method: registerNatives
-Modifier: private static native
-Return Type: void
-Parameter Types(s): 
-
-
-
- no other SuperClass of java.lang.Object
-
- no SuperInterface of java.lang.Object
-
-
------------------SUPERCLASS java.lang.Object INSPECTION END-----------------
-
-
-
------------------INTERFACE java.lang.Cloneable INSPECTION START-----------------
-
-
--------------Inspecting Methods-------------
+-------------Inspecting Methods END-------------
 
 
  no superClass to the Interface java.lang.Cloneable
@@ -1612,6 +1608,9 @@ Parameter Types(s):
 -------------Inspecting Methods-------------
 
 
+-------------Inspecting Methods END-------------
+
+
  no superClass to the Interface java.io.Serializable
 
 
@@ -1620,6 +1619,9 @@ Parameter Types(s):
 -------------RECURSE ON FIELD: START-------------
 
 -------------Inspecting Fields-------------
+
+
+-------------Inspecting Fields END-------------
 
 -------------RECURSE ON FIELD: END-------------
 ======================================================
@@ -1632,25 +1634,10 @@ Interfaces: java.io.Serializable,java.lang.Comparable,java.lang.CharSequence
 -------------Inspecting Methods-------------
 
 -----------------
-Method: value
-Modifier: 
-Return Type: [B
-Parameter Types(s): 
-
-
------------------
 Method: equals
 Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
-
-
------------------
-Method: length
-Modifier: public
-Return Type: int
-Parameter Types(s): 
-
 
 -----------------
 Method: toString
@@ -1658,27 +1645,17 @@ Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
 
-
 -----------------
 Method: hashCode
 Modifier: public
 Return Type: int
 Parameter Types(s): 
 
-
------------------
-Method: getChars
-Modifier: public
-Return Type: void
-Parameter Types(s): int,int,[C,int
-
-
 -----------------
 Method: compareTo
 Modifier: public
 Return Type: int
 Parameter Types(s): java.lang.String
-
 
 -----------------
 Method: compareTo
@@ -1686,34 +1663,11 @@ Modifier: public volatile
 Return Type: int
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: indexOf
 Modifier: public
 Return Type: int
 Parameter Types(s): java.lang.String,int
-
-
------------------
-Method: indexOf
-Modifier: public
-Return Type: int
-Parameter Types(s): int
-
-
------------------
-Method: indexOf
-Modifier: static
-Return Type: int
-Parameter Types(s): [B,byte,int,java.lang.String,int
-
-
------------------
-Method: indexOf
-Modifier: public
-Return Type: int
-Parameter Types(s): int,int
-
 
 -----------------
 Method: indexOf
@@ -1721,34 +1675,35 @@ Modifier: public
 Return Type: int
 Parameter Types(s): java.lang.String
 
-
 -----------------
-Method: checkIndex
-Modifier: static
-Return Type: void
+Method: indexOf
+Modifier: public
+Return Type: int
 Parameter Types(s): int,int
 
+-----------------
+Method: indexOf
+Modifier: public
+Return Type: int
+Parameter Types(s): int
+
+-----------------
+Method: indexOf
+Modifier: static
+Return Type: int
+Parameter Types(s): [C,int,int,[C,int,int,int
+
+-----------------
+Method: indexOf
+Modifier: static
+Return Type: int
+Parameter Types(s): [C,int,int,java.lang.String,int
 
 -----------------
 Method: valueOf
 Modifier: public static
 Return Type: java.lang.String
 Parameter Types(s): int
-
-
------------------
-Method: valueOf
-Modifier: public static
-Return Type: java.lang.String
-Parameter Types(s): float
-
-
------------------
-Method: valueOf
-Modifier: public static
-Return Type: java.lang.String
-Parameter Types(s): boolean
-
 
 -----------------
 Method: valueOf
@@ -1756,27 +1711,17 @@ Modifier: public static
 Return Type: java.lang.String
 Parameter Types(s): long
 
+-----------------
+Method: valueOf
+Modifier: public static
+Return Type: java.lang.String
+Parameter Types(s): float
 
 -----------------
 Method: valueOf
 Modifier: public static
 Return Type: java.lang.String
-Parameter Types(s): double
-
-
------------------
-Method: valueOf
-Modifier: public static
-Return Type: java.lang.String
-Parameter Types(s): java.lang.Object
-
-
------------------
-Method: valueOf
-Modifier: public static
-Return Type: java.lang.String
-Parameter Types(s): char
-
+Parameter Types(s): boolean
 
 -----------------
 Method: valueOf
@@ -1784,41 +1729,29 @@ Modifier: public static
 Return Type: java.lang.String
 Parameter Types(s): [C
 
-
 -----------------
 Method: valueOf
 Modifier: public static
 Return Type: java.lang.String
 Parameter Types(s): [C,int,int
 
+-----------------
+Method: valueOf
+Modifier: public static
+Return Type: java.lang.String
+Parameter Types(s): java.lang.Object
 
 -----------------
-Method: coder
-Modifier: 
-Return Type: byte
-Parameter Types(s): 
-
-
------------------
-Method: rangeCheck
-Modifier: private static
-Return Type: java.lang.Void
-Parameter Types(s): [C,int,int
-
+Method: valueOf
+Modifier: public static
+Return Type: java.lang.String
+Parameter Types(s): char
 
 -----------------
-Method: codePoints
-Modifier: public
-Return Type: java.util.stream.IntStream
-Parameter Types(s): 
-
-
------------------
-Method: isEmpty
-Modifier: public
-Return Type: boolean
-Parameter Types(s): 
-
+Method: valueOf
+Modifier: public static
+Return Type: java.lang.String
+Parameter Types(s): double
 
 -----------------
 Method: charAt
@@ -1826,6 +1759,11 @@ Modifier: public
 Return Type: char
 Parameter Types(s): int
 
+-----------------
+Method: checkBounds
+Modifier: private static
+Return Type: void
+Parameter Types(s): [B,int,int
 
 -----------------
 Method: codePointAt
@@ -1833,13 +1771,11 @@ Modifier: public
 Return Type: int
 Parameter Types(s): int
 
-
 -----------------
 Method: codePointBefore
 Modifier: public
 Return Type: int
 Parameter Types(s): int
-
 
 -----------------
 Method: codePointCount
@@ -1847,174 +1783,11 @@ Modifier: public
 Return Type: int
 Parameter Types(s): int,int
 
-
------------------
-Method: offsetByCodePoints
-Modifier: public
-Return Type: int
-Parameter Types(s): int,int
-
-
------------------
-Method: getBytes
-Modifier: public
-Return Type: [B
-Parameter Types(s): java.nio.charset.Charset
-
-
------------------
-Method: getBytes
-Modifier: public
-Return Type: void
-Parameter Types(s): int,int,[B,int
-
-
------------------
-Method: getBytes
-Modifier: public
-Return Type: [B
-Parameter Types(s): java.lang.String
-Exceptions: java.io.UnsupportedEncodingException
-
------------------
-Method: getBytes
-Modifier: public
-Return Type: [B
-Parameter Types(s): 
-
-
------------------
-Method: getBytes
-Modifier: 
-Return Type: void
-Parameter Types(s): [B,int,byte
-
-
------------------
-Method: contentEquals
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.StringBuffer
-
-
------------------
-Method: contentEquals
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.CharSequence
-
-
------------------
-Method: nonSyncContentEquals
-Modifier: private
-Return Type: boolean
-Parameter Types(s): java.lang.AbstractStringBuilder
-
-
------------------
-Method: equalsIgnoreCase
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.String
-
-
 -----------------
 Method: compareToIgnoreCase
 Modifier: public
 Return Type: int
 Parameter Types(s): java.lang.String
-
-
------------------
-Method: regionMatches
-Modifier: public
-Return Type: boolean
-Parameter Types(s): boolean,int,java.lang.String,int,int
-
-
------------------
-Method: regionMatches
-Modifier: public
-Return Type: boolean
-Parameter Types(s): int,java.lang.String,int,int
-
-
------------------
-Method: startsWith
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.String
-
-
------------------
-Method: startsWith
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.String,int
-
-
------------------
-Method: endsWith
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.String
-
-
------------------
-Method: lastIndexOf
-Modifier: public
-Return Type: int
-Parameter Types(s): int
-
-
------------------
-Method: lastIndexOf
-Modifier: static
-Return Type: int
-Parameter Types(s): [B,byte,int,java.lang.String,int
-
-
------------------
-Method: lastIndexOf
-Modifier: public
-Return Type: int
-Parameter Types(s): java.lang.String,int
-
-
------------------
-Method: lastIndexOf
-Modifier: public
-Return Type: int
-Parameter Types(s): java.lang.String
-
-
------------------
-Method: lastIndexOf
-Modifier: public
-Return Type: int
-Parameter Types(s): int,int
-
-
------------------
-Method: substring
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): int,int
-
-
------------------
-Method: substring
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): int
-
-
------------------
-Method: subSequence
-Modifier: public
-Return Type: java.lang.CharSequence
-Parameter Types(s): int,int
-
 
 -----------------
 Method: concat
@@ -2022,62 +1795,113 @@ Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): java.lang.String
 
-
------------------
-Method: replace
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): java.lang.CharSequence,java.lang.CharSequence
-
-
------------------
-Method: replace
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): char,char
-
-
------------------
-Method: matches
-Modifier: public
-Return Type: boolean
-Parameter Types(s): java.lang.String
-
-
 -----------------
 Method: contains
 Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.CharSequence
 
+-----------------
+Method: contentEquals
+Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.CharSequence
 
 -----------------
-Method: replaceFirst
+Method: contentEquals
 Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.StringBuffer
+
+-----------------
+Method: copyValueOf
+Modifier: public static
 Return Type: java.lang.String
-Parameter Types(s): java.lang.String,java.lang.String
-
+Parameter Types(s): [C
 
 -----------------
-Method: replaceAll
-Modifier: public
+Method: copyValueOf
+Modifier: public static
 Return Type: java.lang.String
-Parameter Types(s): java.lang.String,java.lang.String
-
+Parameter Types(s): [C,int,int
 
 -----------------
-Method: split
+Method: endsWith
 Modifier: public
-Return Type: [Ljava.lang.String;
+Return Type: boolean
 Parameter Types(s): java.lang.String
 
+-----------------
+Method: equalsIgnoreCase
+Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.String
 
 -----------------
-Method: split
-Modifier: public
-Return Type: [Ljava.lang.String;
-Parameter Types(s): java.lang.String,int
+Method: format
+Modifier: public static transient
+Return Type: java.lang.String
+Parameter Types(s): java.util.Locale,java.lang.String,[Ljava.lang.Object;
 
+-----------------
+Method: format
+Modifier: public static transient
+Return Type: java.lang.String
+Parameter Types(s): java.lang.String,[Ljava.lang.Object;
+
+-----------------
+Method: getBytes
+Modifier: public
+Return Type: void
+Parameter Types(s): int,int,[B,int
+
+-----------------
+Method: getBytes
+Modifier: public
+Return Type: [B
+Parameter Types(s): java.nio.charset.Charset
+
+-----------------
+Method: getBytes
+Modifier: public
+Return Type: [B
+Parameter Types(s): java.lang.StringExceptions: java.io.UnsupportedEncodingException
+
+-----------------
+Method: getBytes
+Modifier: public
+Return Type: [B
+Parameter Types(s): 
+
+-----------------
+Method: getChars
+Modifier: public
+Return Type: void
+Parameter Types(s): int,int,[C,int
+
+-----------------
+Method: getChars
+Modifier: 
+Return Type: void
+Parameter Types(s): [C,int
+
+-----------------
+Method: indexOfSupplementary
+Modifier: private
+Return Type: int
+Parameter Types(s): int,int
+
+-----------------
+Method: intern
+Modifier: public native
+Return Type: java.lang.String
+Parameter Types(s): 
+
+-----------------
+Method: isEmpty
+Modifier: public
+Return Type: boolean
+Parameter Types(s): 
 
 -----------------
 Method: join
@@ -2085,20 +1909,161 @@ Modifier: public static transient
 Return Type: java.lang.String
 Parameter Types(s): java.lang.CharSequence,[Ljava.lang.CharSequence;
 
-
 -----------------
 Method: join
 Modifier: public static
 Return Type: java.lang.String
 Parameter Types(s): java.lang.CharSequence,java.lang.Iterable
 
+-----------------
+Method: lastIndexOf
+Modifier: public
+Return Type: int
+Parameter Types(s): int
 
 -----------------
-Method: toLowerCase
+Method: lastIndexOf
 Modifier: public
-Return Type: java.lang.String
+Return Type: int
+Parameter Types(s): java.lang.String
+
+-----------------
+Method: lastIndexOf
+Modifier: static
+Return Type: int
+Parameter Types(s): [C,int,int,java.lang.String,int
+
+-----------------
+Method: lastIndexOf
+Modifier: public
+Return Type: int
+Parameter Types(s): java.lang.String,int
+
+-----------------
+Method: lastIndexOf
+Modifier: public
+Return Type: int
+Parameter Types(s): int,int
+
+-----------------
+Method: lastIndexOf
+Modifier: static
+Return Type: int
+Parameter Types(s): [C,int,int,[C,int,int,int
+
+-----------------
+Method: lastIndexOfSupplementary
+Modifier: private
+Return Type: int
+Parameter Types(s): int,int
+
+-----------------
+Method: length
+Modifier: public
+Return Type: int
 Parameter Types(s): 
 
+-----------------
+Method: matches
+Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.String
+
+-----------------
+Method: nonSyncContentEquals
+Modifier: private
+Return Type: boolean
+Parameter Types(s): java.lang.AbstractStringBuilder
+
+-----------------
+Method: offsetByCodePoints
+Modifier: public
+Return Type: int
+Parameter Types(s): int,int
+
+-----------------
+Method: regionMatches
+Modifier: public
+Return Type: boolean
+Parameter Types(s): int,java.lang.String,int,int
+
+-----------------
+Method: regionMatches
+Modifier: public
+Return Type: boolean
+Parameter Types(s): boolean,int,java.lang.String,int,int
+
+-----------------
+Method: replace
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): char,char
+
+-----------------
+Method: replace
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): java.lang.CharSequence,java.lang.CharSequence
+
+-----------------
+Method: replaceAll
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): java.lang.String,java.lang.String
+
+-----------------
+Method: replaceFirst
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): java.lang.String,java.lang.String
+
+-----------------
+Method: split
+Modifier: public
+Return Type: [Ljava.lang.String;
+Parameter Types(s): java.lang.String
+
+-----------------
+Method: split
+Modifier: public
+Return Type: [Ljava.lang.String;
+Parameter Types(s): java.lang.String,int
+
+-----------------
+Method: startsWith
+Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.String,int
+
+-----------------
+Method: startsWith
+Modifier: public
+Return Type: boolean
+Parameter Types(s): java.lang.String
+
+-----------------
+Method: subSequence
+Modifier: public
+Return Type: java.lang.CharSequence
+Parameter Types(s): int,int
+
+-----------------
+Method: substring
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): int
+
+-----------------
+Method: substring
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): int,int
+
+-----------------
+Method: toCharArray
+Modifier: public
+Return Type: [C
+Parameter Types(s): 
 
 -----------------
 Method: toLowerCase
@@ -2106,13 +2071,11 @@ Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): java.util.Locale
 
-
 -----------------
-Method: toUpperCase
+Method: toLowerCase
 Modifier: public
 Return Type: java.lang.String
-Parameter Types(s): java.util.Locale
-
+Parameter Types(s): 
 
 -----------------
 Method: toUpperCase
@@ -2120,6 +2083,11 @@ Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
 
+-----------------
+Method: toUpperCase
+Modifier: public
+Return Type: java.lang.String
+Parameter Types(s): java.util.Locale
 
 -----------------
 Method: trim
@@ -2128,138 +2096,7 @@ Return Type: java.lang.String
 Parameter Types(s): 
 
 
------------------
-Method: strip
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: stripLeading
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: stripTrailing
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: isBlank
-Modifier: public
-Return Type: boolean
-Parameter Types(s): 
-
-
------------------
-Method: indexOfNonWhitespace
-Modifier: private
-Return Type: int
-Parameter Types(s): 
-
-
------------------
-Method: lines
-Modifier: public
-Return Type: java.util.stream.Stream
-Parameter Types(s): 
-
-
------------------
-Method: chars
-Modifier: public
-Return Type: java.util.stream.IntStream
-Parameter Types(s): 
-
-
------------------
-Method: toCharArray
-Modifier: public
-Return Type: [C
-Parameter Types(s): 
-
-
------------------
-Method: format
-Modifier: public static transient
-Return Type: java.lang.String
-Parameter Types(s): java.lang.String,[Ljava.lang.Object;
-
-
------------------
-Method: format
-Modifier: public static transient
-Return Type: java.lang.String
-Parameter Types(s): java.util.Locale,java.lang.String,[Ljava.lang.Object;
-
-
------------------
-Method: copyValueOf
-Modifier: public static
-Return Type: java.lang.String
-Parameter Types(s): [C,int,int
-
-
------------------
-Method: copyValueOf
-Modifier: public static
-Return Type: java.lang.String
-Parameter Types(s): [C
-
-
------------------
-Method: intern
-Modifier: public native
-Return Type: java.lang.String
-Parameter Types(s): 
-
-
------------------
-Method: repeat
-Modifier: public
-Return Type: java.lang.String
-Parameter Types(s): int
-
-
------------------
-Method: isLatin1
-Modifier: private
-Return Type: boolean
-Parameter Types(s): 
-
-
------------------
-Method: checkOffset
-Modifier: static
-Return Type: void
-Parameter Types(s): int,int
-
-
------------------
-Method: checkBoundsOffCount
-Modifier: static
-Return Type: void
-Parameter Types(s): int,int,int
-
-
------------------
-Method: checkBoundsBeginEnd
-Modifier: static
-Return Type: void
-Parameter Types(s): int,int,int
-
-
------------------
-Method: valueOfCodePoint
-Modifier: static
-Return Type: java.lang.String
-Parameter Types(s): int
-
+-------------Inspecting Methods END-------------
 
 
 -------------Inspecting Constructors-------------
@@ -2267,99 +2104,109 @@ Parameter Types(s): int
 -----------------
 constructor: java.lang.String
 modifiers: public
-Parameter Type(s): [B
-
------------------
-constructor: java.lang.String
-modifiers: public
 Parameter Type(s): [B,int,int
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
 Parameter Type(s): [B,java.nio.charset.Charset
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
 Parameter Type(s): [B,java.lang.String
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
 Parameter Type(s): [B,int,int,java.nio.charset.Charset
-
------------------
-constructor: java.lang.String
-modifiers: public
-Parameter Type(s): java.lang.StringBuilder
-
------------------
-constructor: java.lang.String
-modifiers: public
-Parameter Type(s): java.lang.StringBuffer
-
------------------
-constructor: java.lang.String
-modifiers: public
-Parameter Type(s): [C,int,int
-
------------------
-constructor: java.lang.String
-modifiers: public
-Parameter Type(s): [C
-
------------------
-constructor: java.lang.String
-modifiers: public
-Parameter Type(s): java.lang.String
-
------------------
-constructor: java.lang.String
-modifiers: public
-Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
 Parameter Type(s): [B,int,int,java.lang.String
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
-Parameter Type(s): [B,int
+Parameter Type(s): java.lang.StringBuilder
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
-Parameter Type(s): [B,int,int,int
+Parameter Type(s): java.lang.StringBuffer
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): [B
+-------------Inspecting Constructors END-------------
 
 -----------------
 constructor: java.lang.String
 modifiers: public
 Parameter Type(s): [I,int,int
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): 
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): [C
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): java.lang.String
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): [C,int,int
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): [B,int
+-------------Inspecting Constructors END-------------
+
+-----------------
+constructor: java.lang.String
+modifiers: public
+Parameter Type(s): [B,int,int,int
+-------------Inspecting Constructors END-------------
 
 -----------------
 Field: value
 Modifier: private final
-Type: byte [11]
+Type: char [11]
 Array Contents: 
-Element 0: 84
-Element 1: 101
-Element 2: 115
-Element 3: 116
-Element 4: 32
-Element 5: 83
-Element 6: 116
-Element 7: 114
-Element 8: 105
-Element 9: 110
-Element 10: 103
------------------
-Field: coder
-Modifier: private final
-Type: byte
-  Value: 0
+Element 0: T
+Element 1: e
+Element 2: s
+Element 3: t
+Element 4:  
+Element 5: S
+Element 6: t
+Element 7: r
+Element 8: i
+Element 9: n
+Element 10: g
 -----------------
 Field: hash
 Modifier: private
@@ -2371,11 +2218,6 @@ Modifier: private static final
 Type: long
   Value: -6849794470754667710
 -----------------
-Field: COMPACT_STRINGS
-Modifier: static final
-Type: boolean
-  Value: true
------------------
 Field: serialPersistentFields
 Modifier: private static final
 Type: java.io.ObjectStreamField [0]
@@ -2383,17 +2225,7 @@ Type: java.io.ObjectStreamField [0]
 Field: CASE_INSENSITIVE_ORDER
 Modifier: public static final
 Type: interface java.util.Comparator
-  Value: java.lang.String$CaseInsensitiveComparator 157456214
------------------
-Field: LATIN1
-Modifier: static final
-Type: byte
-  Value: 0
------------------
-Field: UTF16
-Modifier: static final
-Type: byte
-  Value: 1
+  Value: java.lang.String$CaseInsensitiveComparator 312714112
 
 
 -----------------SUPERCLASS java.lang.Object INSPECTION START-----------------
@@ -2406,6 +2238,7 @@ SuperInterfaces:
 constructor: java.lang.Object
 modifiers: public
 Parameter Type(s): 
+-------------Inspecting Constructors END-------------
 
 
 -------------Inspecting Methods-------------
@@ -2414,29 +2247,25 @@ Parameter Type(s):
 Method: finalize
 Modifier: protected
 Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.Throwable
+Parameter Types(s): Exceptions: java.lang.Throwable
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): Exceptions: java.lang.InterruptedException
+
+-----------------
+Method: wait
+Modifier: public final
+Return Type: void
+Parameter Types(s): long,intExceptions: java.lang.InterruptedException
 
 -----------------
 Method: wait
 Modifier: public final native
 Return Type: void
-Parameter Types(s): long
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): long,int
-Exceptions: java.lang.InterruptedException
-
------------------
-Method: wait
-Modifier: public final
-Return Type: void
-Parameter Types(s): 
-Exceptions: java.lang.InterruptedException
+Parameter Types(s): longExceptions: java.lang.InterruptedException
 
 -----------------
 Method: equals
@@ -2444,13 +2273,11 @@ Modifier: public
 Return Type: boolean
 Parameter Types(s): java.lang.Object
 
-
 -----------------
 Method: toString
 Modifier: public
 Return Type: java.lang.String
 Parameter Types(s): 
-
 
 -----------------
 Method: hashCode
@@ -2458,20 +2285,17 @@ Modifier: public native
 Return Type: int
 Parameter Types(s): 
 
-
 -----------------
 Method: getClass
 Modifier: public final native
 Return Type: java.lang.Class
 Parameter Types(s): 
 
-
 -----------------
 Method: clone
 Modifier: protected native
 Return Type: java.lang.Object
-Parameter Types(s): 
-Exceptions: java.lang.CloneNotSupportedException
+Parameter Types(s): Exceptions: java.lang.CloneNotSupportedException
 
 -----------------
 Method: notify
@@ -2479,13 +2303,11 @@ Modifier: public final native
 Return Type: void
 Parameter Types(s): 
 
-
 -----------------
 Method: notifyAll
 Modifier: public final native
 Return Type: void
 Parameter Types(s): 
-
 
 -----------------
 Method: registerNatives
@@ -2493,6 +2315,8 @@ Modifier: private static native
 Return Type: void
 Parameter Types(s): 
 
+
+-------------Inspecting Methods END-------------
 
 
  no other SuperClass of java.lang.Object
@@ -2508,6 +2332,9 @@ Parameter Types(s):
 
 
 -------------Inspecting Methods-------------
+
+
+-------------Inspecting Methods END-------------
 
 
  no superClass to the Interface java.io.Serializable
@@ -2529,6 +2356,8 @@ Return Type: int
 Parameter Types(s): java.lang.Object
 
 
+-------------Inspecting Methods END-------------
+
 
  no superClass to the Interface java.lang.Comparable
 
@@ -2543,25 +2372,10 @@ Parameter Types(s): java.lang.Object
 -------------Inspecting Methods-------------
 
 -----------------
-Method: length
-Modifier: public abstract
-Return Type: int
-Parameter Types(s): 
-
-
------------------
 Method: toString
 Modifier: public abstract
 Return Type: java.lang.String
 Parameter Types(s): 
-
-
------------------
-Method: codePoints
-Modifier: public
-Return Type: java.util.stream.IntStream
-Parameter Types(s): 
-
 
 -----------------
 Method: charAt
@@ -2569,6 +2383,11 @@ Modifier: public abstract
 Return Type: char
 Parameter Types(s): int
 
+-----------------
+Method: length
+Modifier: public abstract
+Return Type: int
+Parameter Types(s): 
 
 -----------------
 Method: subSequence
@@ -2576,20 +2395,23 @@ Modifier: public abstract
 Return Type: java.lang.CharSequence
 Parameter Types(s): int,int
 
-
 -----------------
 Method: chars
 Modifier: public
 Return Type: java.util.stream.IntStream
 Parameter Types(s): 
 
+-----------------
+Method: codePoints
+Modifier: public
+Return Type: java.util.stream.IntStream
+Parameter Types(s): 
 
 -----------------
-Method: compare
-Modifier: public static
-Return Type: int
-Parameter Types(s): java.lang.CharSequence,java.lang.CharSequence
-
+Method: lambda$chars$0
+Modifier: private
+Return Type: java.util.Spliterator$OfInt
+Parameter Types(s): 
 
 -----------------
 Method: lambda$codePoints$1
@@ -2598,12 +2420,7 @@ Return Type: java.util.Spliterator$OfInt
 Parameter Types(s): 
 
 
------------------
-Method: lambda$chars$0
-Modifier: private
-Return Type: java.util.Spliterator$OfInt
-Parameter Types(s): 
-
+-------------Inspecting Methods END-------------
 
 
  no superClass to the Interface java.lang.CharSequence
@@ -2622,5 +2439,12 @@ Field: serialPersistentFieldsis an array
 Component Type: java.io.ObjectStreamField
  Empty Array.
 Field: public static final java.util.Comparator java.lang.String.CASE_INSENSITIVE_ORDER is Primitive
+
+-------------Inspecting Fields END-------------
+
 -------------RECURSE ON FIELD: END-------------
 ======================================================
+bash-4.4$ exit
+exit
+
+Script done on 2019-03-08 22:38:47-07:00
