@@ -117,7 +117,7 @@ public class Inspector{
        for(int i =0; i < arrayContents.length; i++){
            Object element = arrayContents[i];
 
-           String elementOutput = "";
+           String elementOutput = null;
            if(element != null)
                    //check if wrapper class instance
                    if(element instanceof Character ||
