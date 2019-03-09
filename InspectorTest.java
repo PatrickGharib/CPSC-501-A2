@@ -39,14 +39,13 @@ public class InspectorTest {
             inspector.inspect(obj3, false);
             assertEquals(3, objectHash.size());
             assertTrue(inspector.duplicateInspectionCheck(obj3));
-            //classB should recurse twice, but HashSet should already have classB hashcode
             inspector.inspect(obj3, true);
-            assertEquals(5, objectHash.size());
+            assertEquals(3, objectHash.size());
 
             Object obj4 = new ClassD();
             assertFalse(inspector.duplicateInspectionCheck(obj4));
             inspector.inspect(obj4, false);
-            assertEquals(6, objectHash.size());
+            assertEquals(4, objectHash.size());
             assertTrue(inspector.duplicateInspectionCheck(obj4));
 
             Object obj5 = new ClassB[10];
@@ -58,6 +57,7 @@ public class InspectorTest {
             assertFalse(inspector.duplicateInspectionCheck(stringTesting));
             inspector.inspect(stringTesting, true);
             assertTrue(inspector.duplicateInspectionCheck(stringTesting));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
