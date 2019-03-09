@@ -15,12 +15,17 @@ public class Inspector{
            Class classObj = object.getClass();
            Class superClassObj = classObj.getSuperclass();
            Class[] interfaceObjs = classObj.getInterfaces();
-           Constructor[] constructorObjs = classObj.getConstructors();
+           //Constructor[] constructorObjs = classObj.getConstructors();
            Field[] fieldObjs = classObj.getDeclaredFields();
 
 
            classInspector(classObj, object, fieldObjs);
-           constructorInspector(constructorObjs);
+           superClassInspector(superClassObj, object);
+           for(Class c : interfaceObjs){
+               interfaceInspector(c, object);
+           }
+
+          // constructorInspector(constructorObjs);
 
            if(recurseFlag){
                System.out.println("-------------RECURSE ON FIELD: START-------------");
@@ -30,6 +35,7 @@ public class Inspector{
 
        }catch(Exception exception){
            exception.printStackTrace();
+           return;
        }
    }
    public void classInspector(Class classObj, Object object, Field[] declaredFields){
@@ -203,7 +209,7 @@ public class Inspector{
                System.out.println("Return Type: " + methodReturnType.getName());
                System.out.print("Parameter Types(s): ");
                printClassObjects(allMethodParameterTypes);
-
+               System.out.println();
 
 
                if (allMethodExceptionTypes.length > 0) {
@@ -239,7 +245,72 @@ public class Inspector{
                System.out.println("\n");
            }
        }
+    private void interfaceInspector(Class interfaceClassToInspect, Object object){
+        Class superClassOfInterface = null;
 
+        System.out.printf("\n\n-----------------INTERFACE %s INSPECTION START-----------------\n\n", interfaceClassToInspect.getName());
+        if (interfaceClassToInspect.getSuperclass() != null){
+            superClassOfInterface = interfaceClassToInspect.getSuperclass();
+            System.out.println("SuperClass: " + superClassOfInterface.getName());
+        }
+        Method[] methodsOfInterFace = interfaceClassToInspect.getDeclaredMethods();
+        Field[] fieldsOfInterface = interfaceClassToInspect.getDeclaredFields();
+
+        methodInspector(methodsOfInterFace);
+        fieldValuesInspector(fieldsOfInterface, object);
+
+        if(superClassOfInterface != null){
+            System.out.println("\nSuperClass of " + interfaceClassToInspect.getName() +" is "  + superClassOfInterface.getName() );
+            superClassInspector(superClassOfInterface,object);
+        }else{
+            System.out.println("\n no superClass to the Interface " + interfaceClassToInspect.getName());
+
+        }
+        System.out.printf("\n\n-----------------INTERFACE %s INSPECTION END-----------------\n\n", interfaceClassToInspect.getName());
+
+    }
+    private void superClassInspector(Class superClassToInspect, Object object){
+        Class innerSuperClass = null;
+        Class[] innerSuperInterface = null;
+
+        System.out.printf("\n\n-----------------SUPERCLASS %s INSPECTION START-----------------\n\n", superClassToInspect.getName());
+        if(superClassToInspect.getSuperclass() != null){
+          innerSuperClass = superClassToInspect.getSuperclass();
+          System.out.println("SuperClass: " + innerSuperClass.getName());
+        }
+        if(superClassToInspect.getInterfaces() != null){
+            innerSuperInterface = superClassToInspect.getInterfaces();
+            System.out.print("SuperInterfaces: ");
+            printClassObjects(innerSuperInterface);
+            System.out.println();
+        }
+        Constructor[] innerSuperConstructors = superClassToInspect.getConstructors();
+        Method[] innerSuperMethods = superClassToInspect.getDeclaredMethods();
+        Field[] innerSuperFields = superClassToInspect.getDeclaredFields();
+
+        constructorInspector(innerSuperConstructors);
+        methodInspector(innerSuperMethods);
+        fieldValuesInspector(innerSuperFields, object);
+
+        if(innerSuperClass != null){
+            System.out.println("\nSuperClass of " + superClassToInspect.getName() +" is "  + innerSuperClass.getName() );
+            superClassInspector(innerSuperClass,object);
+        }else{
+            System.out.println("\n no other SuperClass of " + superClassToInspect.getName());
+
+        }
+        if(innerSuperInterface.length>0) {
+            for (int i = 0; i < innerSuperInterface.length; i++) {
+                System.out.println("\nSuperInterface of " + superClassToInspect.getName() + " is " + innerSuperInterface[i].getName());
+                interfaceInspector(innerSuperClass, object);
+            }
+        } else{
+                System.out.println("\n no SuperInterface of " + superClassToInspect.getName());
+            }System.out.printf("\n\n-----------------SUPERCLASS %s INSPECTION END-----------------\n\n", superClassToInspect.getName());
+
+
+
+    }
 
 
 }
