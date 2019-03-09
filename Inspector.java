@@ -45,6 +45,23 @@ public class Inspector{
        methodInspector(methodObj);
        constructorInspector(constructorObjs);
        fieldValuesInspector(declaredFields,object);
+
+       if (classObj.isArray()) {
+           Object[] arrayContents;
+           Class TypeOfArray = classObj.getComponentType();
+           System.out.println("Component Type: " + TypeOfArray.getName());
+           if (object instanceof Object[]) {
+               arrayContents = (Object[]) object;
+           } else {
+               arrayContents = new Object[Array.getLength(object)];
+               for (int i = 0; i < Array.getLength(object); i++) {
+                   arrayContents[i] = Array.get(object, i);
+               }
+
+           }
+           printArrayContents(arrayContents);
+       }
+
    }
    public void fieldValuesInspector(Field[] declaredFields, Object object){
         for(Field field:declaredFields){
